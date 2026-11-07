@@ -7,6 +7,13 @@ Canva's own PPTX export drops element animations and on-click sequences, and it 
 Everything runs locally in your browser. Nothing is uploaded.
 
 <p align="center">
+  <a href="https://www.loom.com/share/2378d922811649b788ba4d074030f99c">
+    <img src="docs/demo.jpg" alt="Watch the demo: Canva animations carried into PowerPoint" width="82%">
+  </a>
+  <br><sub><a href="https://www.loom.com/share/2378d922811649b788ba4d074030f99c"><b>Watch the demo</b></a> to see it work end to end.</sub>
+</p>
+
+<p align="center">
   <img src="docs/converter.png" alt="The converter page" width="62%">
   <img src="docs/popup.png" alt="The extension popup" width="30%">
 </p>
