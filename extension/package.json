@@ -1,0 +1,17 @@
+{
+  "name": "canva-pptx-animations",
+  "version": "1.8.1",
+  "description": "Chrome extension that carries Canva animations and click sequences into a PowerPoint (PPTX) file.",
+  "private": true,
+  "license": "MIT",
+  "author": "Ahnaf Zakaria",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test test/core.test.js",
+    "pack": "cd .. && zip -r canva-pptx-animations.zip extension -x 'extension/node_modules/*' 'extension/test/*' 'extension/package.json' 'extension/package-lock.json'"
+  },
+  "devDependencies": {
+    "@xmldom/xmldom": "^0.9.12",
+    "jszip": "^3.10.2"
+  }
+}
