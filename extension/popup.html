@@ -1,0 +1,26 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<body class="popup">
+  <header class="hero"><div class="hero-in">
+    <div class="eyebrow">
+      <svg class="mark" style="width:28px;height:28px;margin-right:10px" viewBox="0 0 44 44" aria-hidden="true"><rect x="5" y="9" width="23" height="17" rx="2"/><rect x="16" y="18" width="23" height="17" rx="2"/><path d="M8 38c4-1 8-1 12 0"/></svg>
+      <span>Canva &rarr; PowerPoint</span><small class="ver" id="ver"></small>
+    </div>
+    <h1>Keep the <em>motion.</em></h1>
+  </div></header>
+  <ol class="flow">
+    <li><span class="num">1</span><span><b>Read</b> the design open in Canva</span></li>
+    <li><span class="num">2</span><span><b>Download</b> it as PPTX from Canva</span></li>
+    <li><span class="num">3</span><span><b>Convert</b> it in the converter</span></li>
+  </ol>
+  <div class="body">
+    <div id="status" class="status" aria-live="polite"></div>
+    <div class="btns">
+      <button id="read" class="primary">Read this design</button>
+      <button id="open" class="secondary" disabled>Open converter <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+  </div>
+  <script src="core.js"></script>
+  <script src="popup.js"></script>
+</body>

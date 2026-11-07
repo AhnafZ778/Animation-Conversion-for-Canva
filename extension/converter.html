@@ -1,0 +1,72 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Canva to PowerPoint, with the motion intact</title>
+<link rel="stylesheet" href="style.css">
+<body class="page">
+  <header class="hero"><div class="hero-in">
+    <div class="eyebrow">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><rect x="5" y="9" width="23" height="17" rx="2"/><rect x="16" y="18" width="23" height="17" rx="2"/><path d="M8 38c4-1 8-1 12 0"/></svg>
+      <span>Canva &rarr; PowerPoint</span><small class="ver" id="ver"></small>
+    </div>
+    <h1>Your slides, <em>still moving.</em></h1>
+    <p class="lede">Carry Canva's animations, click order and exact typography into a real PowerPoint file.</p>
+  </div></header>
+
+  <main>
+    <div class="sheet">
+      <section class="step">
+        <div class="step-n">01<small>Read</small></div>
+        <div class="step-body">
+          <h2>What's animated in your design</h2>
+          <div id="source" class="status">Nothing read yet. Open your design in Canva and press the extension's button.</div>
+          <div id="breakdown"></div>
+          <p class="hint" id="listhint" hidden style="margin:12px 0 0">Untick anything you don't want in PowerPoint, like animations that came with a template.</p>
+          <div style="margin-top:14px"><button id="support" class="secondary" disabled>Download support file</button></div>
+          <details><summary>No extension button? Load a saved Canva page</summary>
+            <input type="file" id="htmlfile" accept=".html,.htm,.json">
+          </details>
+        </div>
+      </section>
+
+      <section class="step">
+        <div class="step-n">02<small>Export</small></div>
+        <div class="step-body">
+          <h2>Canva's own PPTX</h2>
+          <p class="hint">In Canva choose <b>Share, Download, PPTX</b> from the <b>same design</b>, then drop it here.</p>
+          <label id="drop" class="drop">
+            <input type="file" id="pptx" accept=".pptx" hidden>
+            <span class="dz-ico" id="dzIco"><svg viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5M4 20h16"/></svg></span>
+            <span class="dz-txt"><b id="dropText">Drop the .pptx here</b><span class="dz-sub" id="dzSub">or click to choose a file</span></span>
+          </label>
+        </div>
+      </section>
+
+      <section class="step">
+        <div class="step-n">03<small>Tune</small></div>
+        <div class="step-body">
+          <h2>How text should come across</h2>
+          <div class="nums">
+            <label>Stagger, ms<input type="number" id="stagger" min="0" max="1000" value="70"></label>
+            <label>Default duration, ms<input type="number" id="dur" min="100" max="5000" value="500"></label>
+          </div>
+          <div class="opts">
+            <label class="row"><span class="t">Fix text layout<small>Keeps text inside Canva's boxes if a font gets substituted.</small></span>
+              <span class="sw"><input type="checkbox" id="fixtext" checked><i></i></span></label>
+            <label class="row"><span class="t">Exact look<span class="badge">closest match</span><small>Draws text with Canva's own fonts, so it looks identical in every app. The text becomes a picture and can't be edited; animations still work.</small></span>
+              <span class="sw"><input type="checkbox" id="exact"><i></i></span></label>
+            <label class="row"><span class="t">Compatibility mode<small>Swaps fonts for Arial and Times, sized to Canva's exact widths. Text stays editable. For LibreOffice, Keynote and Google Slides.</small></span>
+              <span class="sw"><input type="checkbox" id="compat"><i></i></span></label>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="go"><button id="go" class="primary big" disabled>Convert to PowerPoint <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+    <div id="result" aria-live="polite"></div>
+    <p class="foot">Runs entirely in your browser. Nothing is uploaded.</p>
+  </main>
+  <script src="jszip.min.js"></script>
+  <script src="core.js"></script>
+  <script src="converter.js"></script>
+</body>

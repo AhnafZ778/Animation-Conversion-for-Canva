@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Canva Animations to PowerPoint",
+  "version": "1.8.1",
+  "description": "Carry your Canva animations and click sequences over to PowerPoint. Read the design, drop in Canva's PPTX export, get an animated PPTX.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://www.canva.com/*"
+  ],
+  "action": {
+    "default_title": "Canva Animations to PowerPoint",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "32": "assets/icons/icon32.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.canva.com/design/*"
+      ],
+      "js": [
+        "core.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "32": "assets/icons/icon32.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  }
+}
