@@ -1,0 +1,42 @@
+# --- dependencies & build output
+node_modules/
+*.zip
+dist/
+
+# --- private / personal material (never publish)
+*.pptx
+*.ppt
+canva-design-page.html
+canva-full-capture.json
+canva-support-file*.json
+canva-*-report*.json
+canva-env-dump.json
+canva-idb-dump.json
+canva-find.json
+out/
+ir/
+
+# --- local development scaffolding (reverse-engineering notes, probes, Python reference, local browser tests)
+probe-extension/
+converter/
+tools/
+tests/
+TESTING.md
+.venv/
+.pytest_cache/
+__pycache__/
+extension/test/e2e.js
+extension/test/raster.js
+extension/test/real.js
+extension/test/run.js
+extension/test/shots.js
+
+# --- OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+
+# optional local samples for the extra tests (a saved Canva page + its PPTX export)
+samples/
